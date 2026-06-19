@@ -35,6 +35,7 @@
     font-size: 16px;
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
+    padding-top: 5rem;
   }
 
   /* ── NAV ─────────────────────────────────────────── */
@@ -263,8 +264,6 @@
     border-top: 1px solid rgba(255,255,255,0.1);
     padding-top: 3rem;
   }
-
-  .stat-item {}
 
   .stat-number {
     font-family: var(--serif);
@@ -545,13 +544,13 @@
 
   /* ── RESPONSIVE ───────────────────────────────────── */
   @media (max-width: 900px) {
-    nav { padding: 1rem 1.25rem; }
+    nav { padding: 1rem 1rem; }
     .nav-toggle { display: flex; }
     .nav-links {
       position: absolute;
       top: 100%;
-      right: 1.25rem;
-      left: 1.25rem;
+      right: 1rem;
+      left: 1rem;
       margin: 0;
       padding: 1.5rem 1rem;
       background: rgba(249,247,243,0.98);
@@ -567,20 +566,31 @@
       font-size: 0.9rem;
       letter-spacing: 0.08em;
     }
-    #hero, section, #pullquote, #philosophy { padding-left: 1.5rem; padding-right: 1.5rem; }
-    #hero { padding-bottom: 3rem; }
+    #hero, section, #pullquote, #philosophy { padding-left: 1.25rem; padding-right: 1.25rem; }
+    #hero {
+      min-height: auto;
+      justify-content: flex-start;
+      padding-top: 6rem;
+      padding-bottom: 3rem;
+    }
     .hero-credential-strip { display: none; }
     #about .about-layout { grid-template-columns: 1fr; gap: 2.5rem; }
     .portrait-wrap { max-height: 480px; }
     #programmes .prog-grid { grid-template-columns: 1fr; }
     .contact-layout { grid-template-columns: 1fr; gap: 2.5rem; }
-    footer { flex-direction: column; align-items: flex-start; padding: 2rem 1.5rem; }
+    footer { flex-direction: column; align-items: flex-start; padding: 2rem 1.25rem; }
   }
 
   @media (max-width: 700px) {
+    nav { padding: 1rem 0.9rem; }
+    .nav-links {
+      right: 0.9rem;
+      left: 0.9rem;
+    }
     .service-card, .prog-card, .award-row, .stat-item, .cred-row { font-size: 0.95rem; }
     .hero-sub { max-width: 100%; }
     .hero-ctas { flex-direction: column; align-items: stretch; }
+    .hero-ctas a { width: 100%; }
     .btn-primary, .btn-outline {
       width: 100%;
       text-align: center;
@@ -594,8 +604,13 @@
     .award-row { grid-template-columns: 1fr; }
     .stats-grid { grid-template-columns: 1fr; }
     .contact-layout { gap: 2rem; }
-    .service-card { padding: 1.75rem 1.25rem; }
+    .service-card { padding: 1.75rem 1rem; }
     section { padding-top: 4rem; padding-bottom: 4rem; }
+    #hero { padding-top: 5.5rem; }
+    .hero-eyebrow { font-size: 0.7rem; }
+    .hero-sub { font-size: 0.92rem; }
+    .btn-primary, .btn-outline { padding: 0.85rem 1rem; }
+    footer { padding: 2rem 1rem; }
   }
 
   /* ── COUNTER ANIMATION ────────────────────────────── */
