@@ -38,9 +38,17 @@
     padding-top: 5rem;
   }
 
+  .page-wrapper {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
   /* ── NAV ─────────────────────────────────────────── */
   nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    position: fixed; top: 0; left: 50%; right: auto; z-index: 100;
+    transform: translateX(-50%);
+    width: min(100%, 1200px);
     display: flex; justify-content: space-between; align-items: center;
     padding: 1.5rem 4rem;
     background: rgba(249,247,243,0.92);
@@ -640,6 +648,7 @@
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
+<div class="page-wrapper">
 
 <!-- ── HERO ──────────────────────────────────────────── -->
 <section id="hero">
@@ -926,6 +935,7 @@
   <span class="footer-brand">Dr. Helen Obiageli Oshikoya · Nobelova Gradani Psychoeducational Services</span>
   <span>International Behaviour Analyst &amp; Autism Specialist · Lagos, Nigeria</span>
 </footer>
+</div>
 
 <script>
   // Counter animation
