@@ -91,8 +91,11 @@
   /* ── HERO ─────────────────────────────────────────── */
   #hero {
     min-height: 100vh;
-    display: flex; flex-direction: column; justify-content: flex-end;
-    padding: 0 4rem 5rem;
+    display: flex; flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 4rem 5rem;
     border-bottom: 1px solid var(--rule);
     position: relative;
     overflow: hidden;
@@ -127,10 +130,13 @@
     max-width: 520px;
     line-height: 1.8;
     margin-bottom: 3rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero-ctas {
     display: flex; gap: 1rem; flex-wrap: wrap;
+    justify-content: center;
   }
 
   .btn-primary {
