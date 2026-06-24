@@ -559,6 +559,26 @@
   }
 
   /* ── RESPONSIVE ───────────────────────────────────── */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { gap: 1.25rem; }
+    .nav-links a { font-size: 0.7rem; }
+    #hero, section, #pullquote, #philosophy { padding-left: 2rem; padding-right: 2rem; }
+    #hero {
+      min-height: auto;
+      justify-content: flex-start;
+      padding-top: 6.5rem;
+      padding-bottom: 3.5rem;
+    }
+    #services .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    #programmes .prog-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem 1.5rem; }
+    #about .about-layout,
+    .contact-layout { grid-template-columns: 1fr; gap: 3rem; }
+    .portrait-wrap { max-height: 430px; }
+    footer { padding: 2.5rem 2rem; }
+  }
+
   @media (max-width: 900px) {
     nav { padding: 1rem 1rem; }
     .nav-toggle { display: flex; }
