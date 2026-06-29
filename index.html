@@ -38,31 +38,39 @@
     font-size: 16px;
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
-    padding-top: 5rem;
+    padding-top: 0;
   }
 
   .page-wrapper {
-    width: 100%;
+    max-width: 1200px;
+    width: min(100%, 1200px);
     margin: 0 auto;
+    padding: 0 1.5rem;
   }
 
   /* ── NAV ─────────────────────────────────────────── */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     width: 100%;
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 1.5rem 4rem;
-    background: rgba(249,247,243,0.92);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--rule);
+    display: flex; justify-content: center; align-items: center;
+    padding: 1.5rem 1.5rem;
+    background: rgb(82, 140, 140);
+    border-bottom: none;
+    position: relative;
   }
 
-  .nav-brand {
-    font-family: var(--serif);
-    font-size: 1.05rem;
-    color: var(--charcoal);
-    text-decoration: none;
-    letter-spacing: 0.01em;
+  .nav-toggle {
+    display: none;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    position: absolute;
+    right: 4rem;
   }
 
   .nav-links {
@@ -72,11 +80,20 @@
     font-size: 0.75rem;
     letter-spacing: 0.12em;
     text-transform: none;
-    color: var(--mid);
+    color: rgba(255,255,255,0.92);
     text-decoration: none;
     transition: color 0.2s;
   }
-  .nav-links a:hover { color: var(--teal); }
+  .nav-links a:hover { color: var(--gold); }
+
+  .nav-logo {
+    position: absolute;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    max-height: 7rem;
+    width: auto;
+  }
 
   .nav-toggle {
     display: none;
@@ -93,21 +110,26 @@
     display: block;
     width: 100%;
     height: 2px;
-    background: var(--charcoal);
+    background: rgba(255,255,255,0.92);
     border-radius: 999px;
   }
 
   /* ── HERO ─────────────────────────────────────────── */
   #hero {
     min-height: 100vh;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
     display: flex; flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 4rem 4rem 5rem;
+    align-items: flex-start;
+    text-align: left;
+    padding: 4rem 1.5rem 5rem;
     border-bottom: 1px solid var(--rule);
-    background: linear-gradient(180deg, rgba(13,112,120,0.62) 0%, rgba(29,27,26,0.98) 100%);
-    position: relative;
+    background: rgb(82, 140, 140);
     overflow: hidden;
   }
 
@@ -150,8 +172,8 @@
     max-width: 620px;
     line-height: 1.8;
     margin-bottom: 1.5rem;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .hero-copy {
@@ -160,19 +182,20 @@
     max-width: 620px;
     line-height: 1.85;
     margin-bottom: 3rem;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .hero-ctas {
     display: flex; gap: 1rem; flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
   }
 
   .btn-primary {
     display: inline-block;
     padding: 0.85rem 2.2rem;
-    background: var(--teal);
+    background: rgb(82, 140, 140);
     color: var(--ivory);
     font-size: 0.75rem;
     letter-spacing: 0.12em;
@@ -692,13 +715,8 @@
 <body>
 
 <!-- ── NAV ───────────────────────────────────────────── -->
-<nav>
-  <a href="#" class="nav-brand">Helen Obiageli Oshikoya PhD (Hon.) · Nobelova Gradani Psychoeducational Services </a>
-  <button class="nav-toggle" aria-expanded="false" aria-label="Open navigation">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
+<nav>  
+  <img src="./logo2.png" alt="Logo" class="nav-logo">
   <ul class="nav-links" id="navLinks">
     <li><a href="#services">Services</a></li>
     <li><a href="#about">About</a></li>
@@ -859,7 +877,7 @@
     <div>
     <div class="about-text">
       <h2>Helen Obiageli Oshikoya PhD (Hon.)</h2>
-      <p>Helen Obiageli Oshikoya is an International Behaviour Analyst, Autism Specialist, Chartered Educational Assessor, and Founder and CEO of Nobelova Gradani Psychoeducational Services.</p>
+      <p>Helen Obiageli Oshikoya PhD (Hon.) is an International Behaviour Analyst, Autism Specialist, Chartered Educational Assessor, and Founder and CEO of Nobelova Gradani Psychoeducational Services.</p>
       <p>With more than three decades of professional experience spanning law, behavioural science, education, and mental health, she has dedicated her career to ensuring that children with developmental challenges are identified early and supported effectively.</p>
       <p>Her work focuses on developmental surveillance, autism intervention, psychometric assessment, workforce development, and professional training for educators and healthcare practitioners across Nigeria and beyond.</p>
       <p>She serves as Ambassador for World Behaviour Analysis Day in Nigeria, sits on the Advisory Committee of the International Behaviour Analysis Organisation, and is Secretary of the Association of Behaviour Analysis of Nigeria (ABAN).</p>
