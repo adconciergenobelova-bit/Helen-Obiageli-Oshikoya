@@ -116,33 +116,49 @@
     font-size: 0.72rem;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: var(--ivory);
+    color: rgba(255,255,255,0.78);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.24);
     margin-bottom: 1.6rem;
   }
 
   #hero h1 {
     font-family: var(--serif);
-    font-size: clamp(3rem, 7vw, 6.5rem);
+    font-size: clamp(4rem, 8vw, 7rem);
     font-weight: 400;
     line-height: 1.05;
     max-width: 900px;
-    margin-bottom: 2rem;
+    margin-bottom: 0.8rem;
     color: var(--ivory);
     text-shadow: 0 2px 14px rgba(0,0,0,0.32);
   }
 
-  #hero h1 em {
-    font-style: italic;
-    color: var(--teal);
-    text-shadow: 0 0 12px rgba(255,255,255,0.75);
+  .hero-titleline {
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 2rem;
   }
 
   .hero-sub {
-    font-size: 0.95rem;
-    color: rgba(255,255,255,0.95);
-    text-shadow: 0 1px 4px rgba(0,0,0,0.22);
-    max-width: 520px;
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    font-style: italic;
+    color: rgba(255,255,255,0.92);
+    text-shadow: 0 1px 6px rgba(0,0,0,0.18);
+    max-width: 620px;
     line-height: 1.8;
+    margin-bottom: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-copy {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.92);
+    max-width: 620px;
+    line-height: 1.85;
     margin-bottom: 3rem;
     margin-left: auto;
     margin-right: auto;
@@ -673,7 +689,7 @@
 
 <!-- ── NAV ───────────────────────────────────────────── -->
 <nav>
-  <a href="#" class="nav-brand">Helen Obiageli Oshikoya PhD (Hon.) · Nobelova Gradani</a>
+  <a href="#" class="nav-brand">Helen Obiageli Oshikoya PhD (Hon.) · Nobelova Gradani Psychoeducational Services </a>
   <button class="nav-toggle" aria-expanded="false" aria-label="Open navigation">
     <span></span>
     <span></span>
@@ -691,13 +707,14 @@
 
 <!-- ── HERO ──────────────────────────────────────────── -->
 <section id="hero">
-  <p class="hero-eyebrow">Nobelova Gradani Psychoeducational Services</p>
-  <h1>Transforming Lives Through <em>Early Intervention</em> &amp; Behavioural Science</h1>
-  <p class="hero-sub">Supporting children, families, educators, and organisations with internationally recognised expertise in Applied Behaviour Analysis, autism spectrum disorder, psychometric assessment, and neurodiversity inclusion.</p>
+  <p class="hero-eyebrow">Private practice</p>
+  <h1>Helen Obiageli Oshikoya</h1>
+  <p class="hero-titleline">LLB, BL, MA (Social Sciences), IBA, QBA, CEA</p>
+  <p class="hero-sub">Private autism assessment and developmental consultation.</p>
+  <p class="hero-copy">Individual, expert-led care for children, adolescents, and adults. Based between Lagos and international partnerships, with secure telehealth support and school consultation by arrangement.</p>
   <div class="hero-ctas">
-    <a href="#contact" class="btn-primary">Book a Consultation</a>
+    <a href="#contact" class="btn-primary">Work with Helen</a>
     <a href="#services" class="btn-outline">View Services</a>
-    <a href="#contact" class="btn-outline">Partner With Us</a>
   </div>
 </section>
 
