@@ -262,7 +262,7 @@
     font-size: 0.72rem;
     letter-spacing: 0.12em;
     text-transform: none;
-    color: rgb(120, 0, 120);
+    color: var(--charcoal);
     font-style: normal;
   }
 
@@ -280,7 +280,7 @@
     font-size: 0.72rem;
     letter-spacing: 0.14em;
     text-transform: none;
-    color: rgb(120, 0, 120);
+    color: var(--gold);
     margin-bottom: 1.4rem;
   }
 
@@ -290,7 +290,11 @@
     font-weight: 400;
     line-height: 1.15;
     margin-bottom: 3rem;
-    color: rgb(82, 140, 140);
+    color: var(--charcoal);
+  }
+
+  #services h2 {
+    color: var(--charcoal);
   }
 
   /* ── SERVICES ─────────────────────────────────────── */
@@ -333,13 +337,13 @@
 
   /* ── STATISTICS ───────────────────────────────────── */
   #stats {
-    background: rgb(28, 28, 28);
-    color: var(--ivory);
+    background: rgb(82, 140, 140);
+    color: var(--charcoal);
     border-bottom: none;
   }
 
-  #stats .section-eyebrow { color: rgb(120, 0, 120); }
-  #stats h2 { color: rgb(82, 140, 140); }
+  #stats .section-eyebrow { color: var(--gold); }
+  #stats h2 { color: var(--white); }
 
   .stats-grid {
     display: grid;
@@ -365,7 +369,7 @@
 
   .stat-label {
     font-size: 0.75rem;
-    color: rgba(249,247,243,0.55);
+    color: var(--ivory);
     line-height: 1.6;
   }
 
@@ -405,7 +409,7 @@
     text-transform: none;
     color: rgb(120, 0, 120);
     padding-top: 0.8rem;
-    border-top: 1px solid var(--rule);
+    border-top: 1px solid rgb(120, 0, 120);
   }
 
   #about .about-text p {
@@ -537,7 +541,7 @@
     font-size: 0.72rem;
     letter-spacing: 0.12em;
     text-transform: none;
-    color: rgb(120, 0, 120);
+    color: var(--charcoal);
     font-style: normal;
   }
 
@@ -810,7 +814,7 @@
 <section id="services">
   <p class="section-eyebrow">What We Offer</p>
   <h2>Considered, expert-led care</h2>
-  <p style="color:var(--mid);font-size:0.92rem;max-width:600px;margin-top:-1.5rem;margin-bottom:0;">Every assessment and intervention programme is conducted personally and shaped around the child, family, and cultural context.</p>
+  <p style="color:var(--mid);font-size:0.92rem;max-width:600px;margin-top:-1.5rem;margin-bottom:0;">Every assessment and intervention programme is personally conducted by an experienced specialist and individually tailored to the child's unique strengths, developmental needs, family priorities, and cultural context, ensuring evidence-based, compassionate, and meaningful support.</p>
 
   <div class="services-grid">
     <div class="service-card">
