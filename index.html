@@ -50,13 +50,12 @@
 
   /* ── NAV ─────────────────────────────────────────── */
   nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    position: sticky; top: 0; left: 0; right: 0; z-index: 100;
     width: 100%;
     display: flex; justify-content: center; align-items: center;
     padding: 0.5rem 0.5rem 0.5rem;
     background: rgb(82, 140, 140);
     border-bottom: none;
-    position: relative;
   }
 
   .nav-inner {
@@ -98,7 +97,7 @@
     text-decoration: none;
     transition: color 0.2s;
   }
-  .nav-links a:hover { color: var(--gold); }
+  .nav-links a:hover { color: rgb(120, 0, 120); }
 
   .nav-logo {
     position: relative;
@@ -138,7 +137,7 @@
     display: flex; flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 4rem 1rem 5rem;
+    padding: 0.75rem 1rem 1rem;
     border-bottom: 1px solid var(--rule);
     background: rgb(82, 140, 140);
     overflow: hidden;
@@ -667,35 +666,39 @@
       gap: 0.5rem;
     }
     .nav-toggle {
-      display: flex;
-      position: static;
-      margin-top: 0.1rem;
-      background: rgb(82, 140, 140);
-      border-radius: 0.5rem;
-      width: 1.5rem;
-      height: 1rem;
+      display: none;
     }
     .nav-logo {
+      order: 1;
       position: static;
       transform: none;
-      margin: 0 auto 0.4rem;
+      margin: 0 auto 0.75rem;
       max-height: 4rem;
     }
     .nav-links {
-      position: absolute;
-      top: calc(100% + 0.75rem);
-      right: 1rem;
-      left: 1rem;
+      order: 2;
+      position: static;
+      width: auto;
       margin: 0;
-      padding: 1.5rem 1rem;
-      background: rgb(82, 140, 140);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 1rem;
-      flex-direction: column;
+      padding: 0;
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 1rem;
-      display: none;
+      display: flex;
     }
-    .nav-links.open { display: flex; }
+    .nav-links li.nav-secondary { display: none; }
+    .nav-links.open {
+      display: flex;
+      padding: 0;
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      width: auto;
+    }
     .nav-links li { margin: 0; }
     .nav-links a {
       font-size: 0.9rem;
@@ -705,7 +708,7 @@
     #hero {
       min-height: auto;
       justify-content: flex-start;
-      padding-top: 3rem;
+      padding-top: 1rem;
       padding-bottom: 3rem;
     }
     .hero-credential-strip { display: none; }
@@ -745,7 +748,7 @@
     .contact-layout { gap: 2rem; }
     .service-card { padding: 1.75rem 1rem; }
     section { padding-top: 4rem; padding-bottom: 4rem; }
-    #hero { padding-top: 5.5rem; }
+    #hero { padding-top: 1.25rem; }
     .hero-eyebrow { font-size: 0.7rem; }
     .hero-sub { font-size: 0.92rem; }
     .btn-primary, .btn-outline { padding: 0.85rem 1rem; }
@@ -763,11 +766,11 @@
 <nav>
   <div class="nav-inner">
     <ul class="nav-links" id="navLinks">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#recognition">Awards</a></li>
-      <li><a href="#programmes">Programmes</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li class="nav-primary"><a href="#services">Services</a></li>
+      <li class="nav-primary"><a href="#about">About</a></li>
+      <li class="nav-secondary"><a href="#recognition">Awards</a></li>
+      <li class="nav-secondary"><a href="#programmes">Programmes</a></li>
+      <li class="nav-primary"><a href="#contact">Contact</a></li>
     </ul>
     <img src="./logo2.png" alt="Logo" class="nav-logo">
     <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
@@ -1122,7 +1125,6 @@
 
   const navToggle = document.querySelector('.nav-toggle');
   const navLinks = document.getElementById('navLinks');
-
   navToggle.addEventListener('click', () => {
     const isOpen = navLinks.classList.toggle('open');
     navToggle.setAttribute('aria-expanded', isOpen.toString());
